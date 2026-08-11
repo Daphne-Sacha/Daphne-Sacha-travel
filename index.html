@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daphne &amp; Sacha — Travel Content Creators</title>
+<meta name="description" content="Daphne &amp; Sacha — travel content creators producing photography, film and aerial content for hotels, villas and beach clubs across Bali, Greece and beyond.">
+<meta name="keywords" content="travel content creator, hotel photographer, hotel videographer, Airbnb photography, drone photography, hotel social media content">
+<meta property="og:title" content="Daphne & Sacha — Travel Content Creators">
+<meta property="og:description" content="Photography, film and drone content for hotels and villas worldwide.">
+<meta property="og:image" content="media/about/about.jpg">
+<link rel="icon" href="media/brand/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="media/brand/apple-touch-icon.png">
+<meta name="theme-color" content="#0E2B27">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone:#E4DDD0;
+  --stone2:#D7CCB6;
+  --ink:#15130F;
+  --ink60:rgba(21,19,15,.62);
+  --ink30:rgba(21,19,15,.3);
+  --sea-deep:#0E2B27;
+  --sea:#1F5850;
+  --sea-light:#79A89F;
+  --line:rgba(21,19,15,.15);
+  --line2:rgba(228,221,208,.22);
+  --font:'Bricolage Grotesque', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --max:1360px;
+  --pad:clamp(20px,5vw,64px);
+  --easing:cubic-bezier(.2,.7,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--stone);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul{margin:0}
+button{font-family:var(--font)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+::selection{background:var(--sea);color:var(--stone)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.tag{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--sea)}
+.dark .tag{color:var(--sea-light)}
+
+.io{opacity:0;transform:translateY(24px);transition:opacity .9s var(--easing),transform .9s var(--easing)}
+.io.on{opacity:1;transform:none}
+.io2.on{transition-delay:.1s}
+.io3.on{transition-delay:.2s}
+
+section[id]{scroll-margin-top:88px}
+.dark{background:var(--sea-deep);color:var(--stone)}
+.dark p{color:rgba(228,221,208,.72)}
+hr.rule{border:0;height:1px;background:var(--line);margin:0}
+.dark hr.rule{background:var(--line2)}
+
+/* nav */
+header.top{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:24px var(--pad);color:#fff;transition:background .4s var(--easing),color .4s var(--easing),padding .3s var(--easing)}
+header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);color:var(--ink);padding-top:15px;padding-bottom:15px;box-shadow:0 1px 0 var(--line)}
+.wordmark{font-weight:700;font-size:1.05rem;letter-spacing:.01em;display:flex;flex-direction:column;line-height:1.15}
+.wordmark small{font-weight:500;font-size:.58rem;letter-spacing:.2em;opacity:.72;margin-top:3px}
+.navlinks{display:flex;gap:34px;list-style:none;padding:0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.navlinks a{border-bottom:1px solid transparent;padding-bottom:3px;transition:border-color .3s}
+.navlinks a:hover{border-color:currentColor}
+.burger{display:none}
+@media(max-width:840px){
+  .navlinks{display:none}
+  .burger{display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:6px;cursor:pointer;z-index:95;position:relative}
+  .burger span{width:21px;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s}
+  .burger.x span:first-child{transform:translateY(3.2px) rotate(45deg)}
+  .burger.x span:last-child{transform:translateY(-3.2px) rotate(-45deg)}
+  .burger.x{color:#fff}
+}
+.mobilenav{position:fixed;inset:0;z-index:80;background:var(--sea-deep);color:var(--stone);display:flex;flex-direction:column;justify-content:center;gap:20px;padding:var(--pad);transform:translateY(-100%);transition:transform .5s var(--easing)}
+.mobilenav.open{transform:none}
+.mobilenav a{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+
+/* hero */
+.hero{position:relative;height:100svh;min-height:540px;color:#fff;display:grid;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(185deg,rgba(10,10,8,.38) 0%,rgba(10,10,8,.04) 30%,rgba(10,10,8,.12) 58%,rgba(8,8,6,.72) 100%)}
+.hero-in{position:relative;z-index:1;align-self:end;padding:0 var(--pad) clamp(46px,7vh,90px);width:100%}
+.hero-tag{color:var(--sea-light);margin-bottom:20px}
+.hero h1{font-size:clamp(2.5rem,7.4vw,5.6rem);font-weight:800;line-height:.96;letter-spacing:-.02em;max-width:15ch}
+.hero-sub{margin-top:26px;max-width:36ch;color:rgba(255,255,255,.85);font-size:1.02rem;font-weight:300}
+.hero-row{margin-top:40px;display:flex;align-items:center;gap:34px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:16px 28px;border:1px solid currentColor;cursor:pointer;background:none;transition:background .3s,color .3s}
+.btn.on-dark{color:#fff}
+.btn.on-dark:hover{background:#fff;color:var(--ink)}
+.btn.on-light{color:var(--ink)}
+.btn.on-light:hover{background:var(--ink);color:var(--stone)}
+.btn.solid{background:var(--sea);color:var(--stone);border-color:var(--sea)}
+.btn.solid:hover{background:transparent;color:var(--sea-light)}
+.scrollhint{display:flex;align-items:center;gap:11px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.scrollhint i{width:32px;height:1px;background:rgba(255,255,255,.5);position:relative;overflow:hidden;display:block}
+.scrollhint i::after{content:'';position:absolute;left:-100%;top:0;bottom:0;width:100%;background:#fff;animation:sh 2.6s ease-in-out infinite}
+@keyframes sh{0%{left:-100%}50%{left:0}100%{left:100%}}
+
+/* generic section head */
+.head{max-width:600px;margin-bottom:clamp(44px,6vw,80px)}
+.head h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.03;margin-top:14px}
+.head p{margin-top:18px;color:var(--ink60);max-width:50ch}
+.pad{padding:clamp(84px,11vw,140px) 0}
+.padsm{padding:clamp(56px,7vw,96px) 0}
+</style>
+</head>
+<body>
+
+<header class="top" id="hdr">
+  <a href="#" class="wordmark">DAPHNE &amp; SACHA<small>TRAVEL CONTENT</small></a>
+  <ul class="navlinks">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<nav class="mobilenav" id="mnav">
+  <a href="#work">Work</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="hero">
+  <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="media/hero/hero-poster.jpg">
+    <source src="media/hero/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-in">
+    <div class="tag hero-tag">Travel Content Creators — Bali · Greece · Worldwide</div>
+    <h1>Visual stories that make people want to be there.</h1>
+    <p class="hero-sub">Photography, film and aerial content for hotels, villas and travel brands — made to turn a scroll into a stay.</p>
+    <div class="hero-row">
+      <a href="#contact" class="btn on-dark">Let's work together</a>
+      <div class="scrollhint"><i></i>Scroll to explore</div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="about">
+  <div class="wrap about-g">
+    <div class="io">
+      <div class="tag">About</div>
+      <h2 class="about-h">Daphne &amp; Sacha</h2>
+      <div class="about-copy">
+        <p>We are passionate creators specializing in digital content, photography, drone videos and travel.</p>
+        <p>Over the past two years, we've collaborated with more than 30 hotels, beach clubs, and restaurants worldwide.</p>
+        <p>Our expertise lies in producing visually stunning, high-quality content tailored to enhance each property's social media presence, websites, and Booking/Airbnb listings. Capturing authentic moments that showcase the true essence of the hotel experience. Our photos are designed to create relatable settings, allowing potential guests to easily picture themselves enjoying their stay.</p>
+        <p>We highlight each hotel's unique atmosphere, from cozy interiors to stunning outdoor views. Our images use real-life scenarios to help guests imagine their perfect vacation, whether by the pool, dining, or waking up to a beautiful sunrise.</p>
+      </div>
+      <div class="stats">
+        <div><b>2+</b><span>Years</span></div>
+        <div><b>30+</b><span>Properties</span></div>
+        <div><b>2</b><span>Continents</span></div>
+      </div>
+    </div>
+    <div class="io io2 about-ph">
+      <img src="media/about/about.jpg" alt="Daphne and Sacha" loading="lazy" style="aspect-ratio:1333/2000">
+    </div>
+  </div>
+</section>
+<style>
+.about-g{display:grid;grid-template-columns:1fr;gap:48px}
+.about-h{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+.about-copy{margin-top:26px;display:flex;flex-direction:column;gap:16px}
+.about-copy p{max-width:48ch;color:var(--ink60)}
+.stats{margin-top:40px;display:flex;gap:clamp(26px,4vw,50px);padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stats div{display:flex;flex-direction:column;gap:4px}
+.stats b{font-size:1.9rem;font-weight:800;color:var(--sea)}
+.stats span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink60)}
+.about-ph img{width:100%;height:auto;object-fit:cover}
+@media(min-width:980px){
+  .about-g{grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+  .about-ph{margin-top:8px}
+  .about-ph img{max-width:420px;margin-left:auto}
+}
+</style>
+
+<section class="dark" id="work">
+  <div class="wrap padsm">
+    <div class="head io">
+      <div class="tag">Selected Work</div>
+      <h2>Collaborations</h2>
+      <p>A running list of properties we've shot for, shown in the order we shot them.</p>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="wrap story-h io">
+      <span class="num">01</span>
+      <div>
+        <h3>Nakama Hotel</h3>
+        <div class="meta">Uluwatu, Bali &nbsp;·&nbsp; Instagram</div>
+        <p class="desc">Perched above Uluwatu's cliffs, Nakama pairs private plunge pools with interiors built for slow mornings.</p>
+      </div>
+    </div>
+    <div class="wrap flow">
+      <figure class="fig io" style="width:60%;margin:0 auto;aspect-ratio:1500/2000">
+        <img src="media/nakama/nakama-01.jpg" alt="Rose petal bath styled with candlelight at Nakama Hotel" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:86%;margin:0 0 0 auto;aspect-ratio:1477/2000">
+        <img src="media/nakama/nakama-02.jpg" alt="A-frame suite at Nakama Hotel with jungle view" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:40%;margin:0 auto 0 0;aspect-ratio:1206/1492">
+        <img src="media/nakama/nakama-03.jpg" alt="Minimal black bathroom fixtures at Nakama Hotel" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:50%;margin:0 0 0 auto;aspect-ratio:1536/1891">
+        <img src="media/nakama/nakama-04.jpg" alt="Poolside loungers shot from above at Nakama Hotel" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:58%;margin:0 auto;aspect-ratio:760/1352">
+        <video class="lazy" muted loop playsinline webkit-playsinline preload="none" poster="media/nakama/nakama-drone-poster.jpg" data-src="media/nakama/nakama-drone.mp4" aria-label="Aerial footage of Nakama Hotel's pool villa"></video>
+      </figure>
+      <figure class="fig io" style="width:44%;margin:0 auto 0 0;aspect-ratio:1500/2000">
+        <img src="media/nakama/nakama-05.jpg" alt="Styled bathroom vanity at Nakama Hotel" loading="lazy">
+      </figure>
+    </div>
+  </article>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <article class="story">
+    <div class="wrap story-h io">
+      <span class="num">02</span>
+      <div>
+        <h3>Akre Hotel</h3>
+        <div class="meta">Naxos, Greece &nbsp;·&nbsp; Website</div>
+        <p class="desc">A pared-back terrace hotel on the Aegean, where the view does most of the talking.</p>
+      </div>
+    </div>
+    <div class="wrap flow">
+      <figure class="fig io" style="width:56%;margin:0 auto;aspect-ratio:760/1352">
+        <video class="lazy" muted loop playsinline webkit-playsinline preload="none" poster="media/akre/akre-01-poster.jpg" data-src="media/akre/akre-01.mp4" aria-label="Walking toward the pool and sea view at Akre Hotel"></video>
+      </figure>
+      <figure class="fig io" style="width:84%;margin:0 auto 0 0;aspect-ratio:1500/2000">
+        <img src="media/akre/akre-01.jpg" alt="Seated on the terrace overlooking the Aegean Sea at Akre Hotel" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:56%;margin:0 0 0 auto;aspect-ratio:760/1352">
+        <video class="lazy" muted loop playsinline webkit-playsinline preload="none" poster="media/akre/akre-02-poster.jpg" data-src="media/akre/akre-02.mp4" aria-label="Restaurant terrace overlooking the sea at Akre Hotel"></video>
+      </figure>
+    </div>
+  </article>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <article class="story">
+    <div class="wrap story-h io">
+      <span class="num">03</span>
+      <div>
+        <h3>Anahata Hotel</h3>
+        <div class="meta">Gili Air, Bali &nbsp;·&nbsp; Instagram</div>
+        <p class="desc">Jungle-wrapped villas on a car-free island, where the pool disappears into bougainvillea.</p>
+      </div>
+    </div>
+    <div class="wrap flow">
+      <figure class="fig io" style="width:68%;margin:0 auto;aspect-ratio:1125/2000">
+        <img src="media/anahata/anahata-01.jpg" alt="Aerial view of a private plunge pool at Anahata Hotel" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:46%;margin:0 0 0 auto;aspect-ratio:1125/2000">
+        <img src="media/anahata/anahata-02.jpg" alt="Overhead view of a floating breakfast tray in the pool at Anahata Hotel" loading="lazy">
+      </figure>
+      <figure class="fig io" style="width:58%;margin:0 auto;aspect-ratio:1125/2000">
+        <img src="media/anahata/anahata-03.jpg" alt="Aerial view of the plunge pool bordered by bougainvillea at Anahata Hotel" loading="lazy">
+      </figure>
+    </div>
+  </article>
+</section>
+<style>
+.story{padding:52px 0}
+.story-h{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;padding-bottom:clamp(32px,4vw,48px)}
+.num{font-size:1.8rem;font-weight:800;color:var(--sea-light);line-height:1}
+.story h3{font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:800;letter-spacing:-.02em}
+.meta{margin-top:8px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea-light)}
+.desc{margin-top:14px;max-width:54ch;font-size:1rem}
+.flow{display:flex;flex-direction:column;gap:clamp(24px,3.4vw,44px)}
+.fig{max-width:640px}
+.fig img,.fig video{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:700px){
+  .fig{width:100%!important;margin:0!important;max-width:none}
+}
+</style>
+
+<section class="pad" id="reel">
+  <div class="wrap reel-g">
+    <div class="io">
+      <div class="tag">In Motion</div>
+      <h2 class="reel-h">Built for the scroll.</h2>
+      <p class="reel-p">A short-form edit made for Instagram and TikTok — proof that thirty seconds of the right footage can do the work of thirty photographs.</p>
+      <div class="reel-line">Short-form video &nbsp;·&nbsp; Reels &amp; TikTok edits &nbsp;·&nbsp; Social-first pacing</div>
+    </div>
+    <div class="io io2 reel-holder">
+      <div class="phone">
+        <video class="lazy reelvid" muted loop playsinline webkit-playsinline preload="none" poster="media/reel/reel-poster.jpg" data-src="media/reel/reel.mp4" aria-label="Instagram reel sample"></video>
+        <button class="soundbtn" id="soundbtn" aria-pressed="false">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/></svg>
+          <span id="soundlbl">Sound off</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.reel-g{display:grid;grid-template-columns:1fr;gap:46px;align-items:center}
+.reel-h{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.02em;margin-top:14px}
+.reel-p{margin-top:20px;max-width:38ch;color:var(--ink60)}
+.reel-line{margin-top:30px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink60)}
+.reel-holder{display:flex;justify-content:center}
+.phone{position:relative;width:min(74vw,280px);aspect-ratio:9/16;border-radius:18px;overflow:hidden;border:5px solid var(--ink);background:var(--ink);box-shadow:0 26px 54px -22px rgba(21,19,15,.4)}
+.phone video{width:100%;height:100%;object-fit:cover}
+.soundbtn{position:absolute;right:10px;bottom:12px;z-index:2;display:flex;align-items:center;gap:6px;background:rgba(15,14,11,.55);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:26px;padding:7px 12px;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+@media(min-width:980px){.reel-g{grid-template-columns:1fr .8fr;gap:74px}.phone{width:280px}}
+</style>
+
+<section class="dark padsm" id="kit">
+  <div class="wrap">
+    <div class="head io">
+      <div class="tag">The Kit</div>
+      <h2>What's in the bag.</h2>
+    </div>
+    <ul class="kitlist">
+      <li class="io"><span class="ki">01</span><h3>iPhone 16 Pro</h3><p>For the moments that need to happen fast, and the vertical content built for Stories and Reels.</p></li>
+      <li class="io io2"><span class="ki">02</span><h3>DJI Drone</h3><p>For the shots no guest ever gets to see: the roofline, the shoreline, the whole property at once.</p></li>
+      <li class="io io3"><span class="ki">03</span><h3>DJI Osmo Stabiliser</h3><p>For movement that feels considered rather than shaky — walkthroughs, reveals, slow pans.</p></li>
+    </ul>
+  </div>
+</section>
+<style>
+.kitlist{list-style:none;margin:0;padding:0}
+.kitlist li{display:grid;grid-template-columns:auto 1fr;gap:16px 26px;padding:24px 0;border-top:1px solid var(--line2)}
+.kitlist li:last-child{border-bottom:1px solid var(--line2)}
+.ki{font-weight:800;color:var(--sea-light);font-size:1rem}
+.kitlist h3{font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:800;grid-column:2}
+.kitlist p{grid-column:2;margin-top:4px;max-width:52ch}
+@media(min-width:820px){.kitlist li{grid-template-columns:56px 280px 1fr}.kitlist p{grid-column:3;margin-top:0}}
+</style>
+
+<section class="pad" id="services">
+  <div class="wrap svc-g">
+    <div class="io svc-ph">
+      <img src="media/services/services.jpg" alt="Poolside styling" loading="lazy" style="aspect-ratio:1125/2000">
+    </div>
+    <div>
+      <div class="head io" style="margin-bottom:40px">
+        <div class="tag">Services</div>
+        <h2>What we create.</h2>
+      </div>
+      <div class="svc-item io"><h3>Content Creation</h3><p>Custom digital content built for your own channels — Instagram reels, TikTok edits and website-ready visuals. Every piece is shot on-brand and designed to hold attention, tell a compelling story, and help your property stand out across platforms.</p></div>
+      <div class="svc-item io io2"><h3>Photoshoots</h3><p>Available as creators and as models — particularly for content built around a couple. Working both behind and in front of the camera, we know how to direct a scene from either side of it: romantic getaways, lifestyle moments, or a brand built on connection.</p></div>
+      <div class="svc-item io io3"><h3>Drone Content</h3><p>Cinematic aerial footage that shows a property the way guests never see it — the roofline, the coastline, the full shape of the place from above. A perspective that makes any marketing strategy feel a little more expansive.</p></div>
+    </div>
+  </div>
+</section>
+<style>
+.svc-g{display:grid;grid-template-columns:1fr;gap:44px}
+.svc-ph img{width:100%;height:auto;object-fit:cover}
+.svc-item{padding:22px 0;border-top:1px solid var(--line)}
+.svc-item h3{font-size:1.3rem;font-weight:800}
+.svc-item p{margin-top:10px;color:var(--ink60);max-width:56ch}
+@media(min-width:980px){.svc-g{grid-template-columns:.7fr 1.3fr;gap:70px}.svc-ph img{max-width:380px}}
+</style>
+
+<section class="dark padsm" id="kind-words">
+  <div class="wrap">
+    <div class="head io">
+      <div class="tag">Kind Words</div>
+      <h2>What partners say.</h2>
+    </div>
+    <div class="qg">
+      <blockquote class="q io"><p>"Add a short, real quote from Nakama Hotel here."</p><cite>Nakama Hotel — Uluwatu, Bali</cite></blockquote>
+      <blockquote class="q io io2"><p>"Add a short, real quote from Akre Hotel here."</p><cite>Akre Hotel — Naxos, Greece</cite></blockquote>
+      <blockquote class="q io io3"><p>"Add a short, real quote from Anahata Hotel here."</p><cite>Anahata Hotel — Gili Air, Bali</cite></blockquote>
+    </div>
+  </div>
+</section>
+<style>
+.qg{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line2)}
+.q{background:var(--sea-deep);padding:clamp(26px,3.6vw,40px) clamp(18px,3vw,32px);margin:0}
+.q p{font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:300;line-height:1.4;color:var(--stone)}
+.q cite{display:block;margin-top:20px;font-style:normal;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea-light)}
+@media(min-width:980px){.qg{grid-template-columns:repeat(3,1fr)}}
+</style>
+
+<section class="cta">
+  <div class="wrap cta-in io">
+    <h2>Your property deserves to be seen differently.</h2>
+    <p>Let's create the kind of content that makes someone picture themselves there before they've even booked.</p>
+    <a href="#contact" class="btn solid">Let's create together</a>
+  </div>
+</section>
+<style>
+.cta{background:var(--sea);color:var(--stone);padding:clamp(84px,13vw,140px) 0;text-align:center}
+.cta-in{display:flex;flex-direction:column;align-items:center}
+.cta h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;max-width:16ch}
+.cta p{margin-top:22px;max-width:42ch;color:rgba(228,221,208,.9)}
+.cta .btn{margin-top:36px;background:var(--stone);color:var(--sea);border-color:var(--stone)}
+.cta .btn:hover{background:transparent;color:var(--stone)}
+</style>
+
+<section class="pad" id="contact">
+  <div class="wrap contact-g">
+    <div class="io">
+      <div class="tag">Get In Touch</div>
+      <h2 class="contact-h">Start a conversation.</h2>
+      <p class="contact-p">Tell us about the property and what you're picturing — we'll get back to you within a couple of days.</p>
+      <div class="direct">
+        <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle on Instagram</a>
+      </div>
+    </div>
+    <form class="cform io io2" action="mailto:hello@yourdomain.com" method="post" enctype="text/plain">
+      <label><span>Name</span><input type="text" name="Name" required></label>
+      <label><span>Company / Property</span><input type="text" name="Property"></label>
+      <label><span>Email</span><input type="email" name="Email" required></label>
+      <label><span>Message</span><textarea name="Message" rows="4" required></textarea></label>
+      <button type="submit" class="btn on-light">Start a conversation</button>
+    </form>
+  </div>
+</section>
+<style>
+.contact-g{display:grid;grid-template-columns:1fr;gap:48px}
+.contact-h{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em;margin-top:14px}
+.contact-p{margin-top:20px;max-width:36ch;color:var(--ink60)}
+.direct{margin-top:32px;display:flex;flex-direction:column;gap:9px}
+.direct a{width:fit-content;border-bottom:1px solid var(--line);padding-bottom:2px}
+.direct a:hover{border-color:var(--ink)}
+.cform{display:flex;flex-direction:column;gap:18px}
+.cform label{display:flex;flex-direction:column;gap:7px;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink60)}
+.cform input,.cform textarea{font-family:var(--font);font-size:1rem;color:var(--ink);background:transparent;border:none;border-bottom:1px solid var(--line);padding:9px 2px;resize:vertical}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--sea)}
+.cform button{margin-top:10px;align-self:flex-start}
+@media(min-width:980px){.contact-g{grid-template-columns:.75fr 1fr;gap:96px}}
+</style>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="fmark">DAPHNE &amp; SACHA</div>
+    <div class="fmeta">
+      <span>Travel Content Creators</span>
+      <span>Photography · Film · Drone</span>
+      <span>Based in [Your City] · Working worldwide</span>
+    </div>
+    <div class="flinks">
+      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@yourdomain.com">Email</a>
+    </div>
+    <div class="fcopy">© 2026 Daphne &amp; Sacha. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.foot{background:var(--ink);color:rgba(228,221,208,.72);padding:clamp(48px,7vw,76px) 0 32px}
+.foot-in{display:flex;flex-direction:column;gap:24px}
+.fmark{font-size:1.3rem;font-weight:800;color:var(--stone)}
+.fmeta{display:flex;flex-direction:column;gap:6px;font-size:.84rem}
+.flinks{display:flex;gap:22px;font-size:.78rem}
+.flinks a{border-bottom:1px solid rgba(228,221,208,.3);padding-bottom:2px}
+.flinks a:hover{border-color:var(--stone)}
+.fcopy{font-size:.72rem;opacity:.55;padding-top:18px;border-top:1px solid rgba(228,221,208,.14)}
+@media(min-width:820px){.foot-in{flex-direction:row;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:18px}.fcopy{width:100%}}
+</style>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('solid', window.scrollY>50); }
+  document.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
+  burger.addEventListener('click',function(){
+    var open=mnav.classList.toggle('open');
+    burger.classList.toggle('x',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  mnav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ mnav.classList.remove('open'); burger.classList.remove('x'); burger.setAttribute('aria-expanded','false'); });
+  });
+
+  var items=document.querySelectorAll('.io');
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+    },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    items.forEach(function(el){ obs.observe(el); });
+  } else { items.forEach(function(el){ el.classList.add('on'); }); }
+
+  var vids=document.querySelectorAll('.lazy');
+  if('IntersectionObserver' in window){
+    var vobs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v=e.target;
+        if(e.isIntersecting){
+          if(!v.src && v.dataset.src){ v.src=v.dataset.src; v.load(); }
+          var p=v.play(); if(p&&p.catch){p.catch(function(){});}
+        } else if(!v.paused){ v.pause(); }
+      });
+    },{threshold:.15,rootMargin:'200px 0px'});
+    vids.forEach(function(v){ vobs.observe(v); });
+  } else { vids.forEach(function(v){ if(v.dataset.src){ v.src=v.dataset.src; } }); }
+
+  var sb=document.getElementById('soundbtn'), sl=document.getElementById('soundlbl'), rv=document.querySelector('.reelvid');
+  if(sb&&rv){
+    sb.addEventListener('click',function(){
+      rv.muted=!rv.muted;
+      var on=!rv.muted;
+      sb.setAttribute('aria-pressed',on?'true':'false');
+      sl.textContent=on?'Sound on':'Sound off';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
