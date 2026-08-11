@@ -499,7 +499,7 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
           if(v.src){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} }
         } else if(!v.paused){ v.pause(); }
       });
-    },{threshold:.15,rootMargin:'200px 0px'});
+    },{threshold:.15,rootMargin:'800px 0px'});
     vids.forEach(function(v){ vobs.observe(v); });
   } else { vids.forEach(function(v){ if(v.dataset.src){ v.src=v.dataset.src; } }); }
 
