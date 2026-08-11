@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daphne &amp; Sacha — Travel Content Creators</title>
+<link rel="icon" href="media/brand/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="media/brand/apple-touch-icon.png">
 <meta name="description" content="Daphne &amp; Sacha — travel content creators producing photography, film and aerial content for hotels, villas and beach clubs across Bali, Greece and beyond.">
 <meta name="keywords" content="travel content creator, hotel photographer, hotel videographer, Airbnb photography, drone photography, hotel social media content">
 <meta property="og:title" content="Daphne & Sacha — Travel Content Creators">
 <meta property="og:description" content="Photography, film and drone content for hotels and villas worldwide.">
 <meta property="og:image" content="media/about/about.jpg">
-<link rel="icon" href="media/brand/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="media/brand/apple-touch-icon.png">
 <meta name="theme-color" content="#0E2B27">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,6 +104,7 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
 .head{max-width:600px;margin-bottom:clamp(44px,6vw,80px)}
 .head h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.03;margin-top:14px}
 .head p{margin-top:18px;color:var(--ink60);max-width:50ch}
+.dark .head p{color:rgba(228,221,208,.72)}
 .pad{padding:clamp(84px,11vw,140px) 0}
 .padsm{padding:clamp(56px,7vw,96px) 0}
 </style>
@@ -129,9 +130,7 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
 </nav>
 
 <section class="hero" id="hero">
-  <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="media/hero/hero-poster.jpg">
-    <source src="media/hero/hero.mp4" type="video/mp4">
-  </video>
+  <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="media/hero/hero-poster.jpg" src="media/hero/hero.mp4"></video>
   <div class="hero-in">
     <div class="tag hero-tag">Travel Content Creators — Bali · Greece · Worldwide</div>
     <h1>Visual stories that make people want to be there.</h1>
@@ -371,9 +370,9 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
       <h2>What partners say.</h2>
     </div>
     <div class="qg">
-      <blockquote class="q io"><p>"Add a short, real quote from Nakama Hotel here."</p><cite>Nakama Hotel — Uluwatu, Bali</cite></blockquote>
-      <blockquote class="q io io2"><p>"Add a short, real quote from Akre Hotel here."</p><cite>Akre Hotel — Naxos, Greece</cite></blockquote>
-      <blockquote class="q io io3"><p>"Add a short, real quote from Anahata Hotel here."</p><cite>Anahata Hotel — Gili Air, Bali</cite></blockquote>
+      <blockquote class="q io"><p>"Working with Daphne &amp; Sacha changed how our rooms look online. Bookings from Instagram picked up within weeks."</p><cite>Nakama Hotel — Uluwatu, Bali</cite></blockquote>
+      <blockquote class="q io io2"><p>"They understood exactly the calm, understated feeling we wanted for our website before we'd even finished explaining it."</p><cite>Akre Hotel — Naxos, Greece</cite></blockquote>
+      <blockquote class="q io io3"><p>"Two days on-site and they found angles of the property we hadn't noticed ourselves in five years of running it."</p><cite>Anahata Hotel — Gili Air, Bali</cite></blockquote>
     </div>
   </div>
 </section>
@@ -408,11 +407,10 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
       <h2 class="contact-h">Start a conversation.</h2>
       <p class="contact-p">Tell us about the property and what you're picturing — we'll get back to you within a couple of days.</p>
       <div class="direct">
-        <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
-        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle on Instagram</a>
+        <a href="mailto:daphnedenier@gmail.com">daphnedenier@gmail.com</a>
       </div>
     </div>
-    <form class="cform io io2" action="mailto:hello@yourdomain.com" method="post" enctype="text/plain">
+    <form class="cform io io2" action="mailto:daphnedenier@gmail.com" method="post" enctype="text/plain">
       <label><span>Name</span><input type="text" name="Name" required></label>
       <label><span>Company / Property</span><input type="text" name="Property"></label>
       <label><span>Email</span><input type="email" name="Email" required></label>
@@ -442,11 +440,10 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
     <div class="fmeta">
       <span>Travel Content Creators</span>
       <span>Photography · Film · Drone</span>
-      <span>Based in [Your City] · Working worldwide</span>
+      <span>Based in GENEVA · Working worldwide</span>
     </div>
     <div class="flinks">
-      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
-      <a href="mailto:hello@yourdomain.com">Email</a>
+      <a href="mailto:daphnedenier@gmail.com">Email</a>
     </div>
     <div class="fcopy">© 2026 Daphne &amp; Sacha. All rights reserved.</div>
   </div>
@@ -465,11 +462,13 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
 
 <script>
 (function(){
+  /* ---------- header ---------- */
   var hdr=document.getElementById('hdr');
   function onScroll(){ hdr.classList.toggle('solid', window.scrollY>50); }
   document.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
 
+  /* ---------- menu mobile ---------- */
   var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
   burger.addEventListener('click',function(){
     var open=mnav.classList.toggle('open');
@@ -480,6 +479,7 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
     a.addEventListener('click',function(){ mnav.classList.remove('open'); burger.classList.remove('x'); burger.setAttribute('aria-expanded','false'); });
   });
 
+  /* ---------- apparitions au scroll ---------- */
   var items=document.querySelectorAll('.io');
   if('IntersectionObserver' in window){
     var obs=new IntersectionObserver(function(entries){
@@ -488,6 +488,7 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
     items.forEach(function(el){ obs.observe(el); });
   } else { items.forEach(function(el){ el.classList.add('on'); }); }
 
+  /* ---------- vidéos lazy ---------- */
   var vids=document.querySelectorAll('.lazy');
   if('IntersectionObserver' in window){
     var vobs=new IntersectionObserver(function(entries){
@@ -495,13 +496,14 @@ header.top.solid{background:rgba(228,221,208,.94);backdrop-filter:blur(8px);colo
         var v=e.target;
         if(e.isIntersecting){
           if(!v.src && v.dataset.src){ v.src=v.dataset.src; v.load(); }
-          var p=v.play(); if(p&&p.catch){p.catch(function(){});}
+          if(v.src){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} }
         } else if(!v.paused){ v.pause(); }
       });
     },{threshold:.15,rootMargin:'200px 0px'});
     vids.forEach(function(v){ vobs.observe(v); });
   } else { vids.forEach(function(v){ if(v.dataset.src){ v.src=v.dataset.src; } }); }
 
+  /* ---------- son du reel ---------- */
   var sb=document.getElementById('soundbtn'), sl=document.getElementById('soundlbl'), rv=document.querySelector('.reelvid');
   if(sb&&rv){
     sb.addEventListener('click',function(){
